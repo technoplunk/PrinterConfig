@@ -1,0 +1,407 @@
+accessControl:
+  salt: GgW2S8wiimgEpYV07vwsvhUlNtUNdpdG
+api:
+  key: 36221EE50DC0408D9594FFCC57F8C4FD
+appearance:
+  components:
+    order:
+      sidebar:
+      - plugin_printer_safety_check
+      - plugin_klipper
+      - state
+      - files
+      - plugin_stats
+      tab:
+      - temperature
+      - control
+      - terminal
+      - plugin_klipper_main
+      - gcodeviewer
+      - timelapse
+      - plugin_enclosure
+      - plugin_printhistory
+      - plugin_stats
+      - plugin_bedlevelvisualizer
+plugins:
+  LEDStripControl:
+    _config_version: 2
+  TerminalCommands:
+    controls:
+    - commands: BED_MESH_CALIBRATE
+      name: Bed Mesh
+    - commands: G32
+      name: Gantry Level
+    - commands: G0 X150 Y150 Z5
+      name: Center
+    - commands: BED_MESH_PROFILE SAVE=ABS
+      name: Mesh ABS
+    - commands: SAVE_CONFIG
+      name: Save Config
+  _disabled:
+  - tempsgraph
+  active_filters_extended:
+    activeFilters:
+    - '(Send: (N\d+\s+)?M105)|(Recv:\s+(ok\s+)?.*(B|T\d*):\d+)'
+    - '(Send: (N\d+\s+)?M27)|(Recv: SD printing byte)|(Recv: Not SD printing)'
+    - 'Recv: wait'
+    - '(Send: (N\d+\s+)?M105)|(Recv:\s+(ok\s+((P|B|N)\d+\s+)*)?(B|T\d*):\d+)'
+  announcements:
+    _config_version: 1
+    channels:
+      _blog:
+        read_until: 1563963300
+      _important:
+        read_until: 1521111600
+      _octopi:
+        read_until: 1573722900
+      _plugins:
+        read_until: 1573862400
+      _releases:
+        read_until: 1571738400
+  bedlevelvisualizer:
+    command: BED_MESH_OUTPUT
+    mesh_timestamp: 2019-11-19, 11:43:25 p.m.
+    stored_mesh:
+    - - '0.070000'
+      - '0.059815'
+      - '0.042519'
+      - '0.030000'
+      - '0.014241'
+      - '-0.009074'
+      - '-0.022500'
+      - '-0.021778'
+      - '-0.016500'
+      - '-0.010000'
+      - '0.011611'
+      - '0.046444'
+      - '0.067500'
+    - - '0.074685'
+      - '0.063333'
+      - '0.044133'
+      - '0.030537'
+      - '0.015268'
+      - '-0.007012'
+      - '-0.019944'
+      - '-0.020311'
+      - '-0.016936'
+      - '-0.011519'
+      - '0.010566'
+      - '0.046438'
+      - '0.068148'
+    - - '0.082481'
+      - '0.069212'
+      - '0.046883'
+      - '0.031519'
+      - '0.017067'
+      - '-0.003499'
+      - '-0.015611'
+      - '-0.017778'
+      - '-0.017550'
+      - '-0.013926'
+      - '0.008918'
+      - '0.046472'
+      - '0.069241'
+    - - '0.087500'
+      - '0.073093'
+      - '0.048907'
+      - '0.032500'
+      - '0.018574'
+      - '-0.000907'
+      - '-0.012500'
+      - '-0.015778'
+      - '-0.017500'
+      - '-0.015000'
+      - '0.008222'
+      - '0.046667'
+      - '0.070000'
+    - - '0.090222'
+      - '0.075818'
+      - '0.051646'
+      - '0.035278'
+      - '0.021590'
+      - '0.002485'
+      - '-0.008926'
+      - '-0.012486'
+      - '-0.014739'
+      - '-0.012630'
+      - '0.010105'
+      - '0.047823'
+      - '0.070722'
+    - - '0.093500'
+      - '0.079402'
+      - '0.055744'
+      - '0.039722'
+      - '0.026332'
+      - '0.007634'
+      - '-0.003574'
+      - '-0.007327'
+      - '-0.009988'
+      - '-0.008259'
+      - '0.013538'
+      - '0.049772'
+      - '0.071778'
+    - - '0.095000'
+      - '0.081241'
+      - '0.058148'
+      - '0.042500'
+      - '0.029370'
+      - '0.011019'
+      - '0.000000'
+      - '-0.003778'
+      - '-0.006556'
+      - '-0.005000'
+      - '0.016093'
+      - '0.051185'
+      - '0.072500'
+    - - '0.092704'
+      - '0.079842'
+      - '0.058250'
+      - '0.043593'
+      - '0.031116'
+      - '0.013639'
+      - '0.003185'
+      - '-0.000091'
+      - '-0.002211'
+      - '-0.000407'
+      - '0.019737'
+      - '0.053177'
+      - '0.073481'
+    - - '0.088296'
+      - '0.076893'
+      - '0.057737'
+      - '0.044685'
+      - '0.033244'
+      - '0.017148'
+      - '0.007593'
+      - '0.005156'
+      - '0.004156'
+      - '0.006407'
+      - '0.025116'
+      - '0.056035'
+      - '0.074796'
+    - - '0.085000'
+      - '0.074556'
+      - '0.057000'
+      - '0.045000'
+      - '0.034222'
+      - '0.019000'
+      - '0.010000'
+      - '0.008000'
+      - '0.007556'
+      - '0.010000'
+      - '0.027815'
+      - '0.057185'
+      - '0.075000'
+    - - '0.080593'
+      - '0.070800'
+      - '0.054327'
+      - '0.043019'
+      - '0.032590'
+      - '0.017770'
+      - '0.008926'
+      - '0.006446'
+      - '0.005142'
+      - '0.007019'
+      - '0.024488'
+      - '0.053409'
+      - '0.070963'
+    - - '0.073963'
+      - '0.065033'
+      - '0.049993'
+      - '0.039593'
+      - '0.029589'
+      - '0.015233'
+      - '0.006519'
+      - '0.003133'
+      - '0.000263'
+      - '0.001148'
+      - '0.018256'
+      - '0.046802'
+      - '0.064148'
+    - - '0.070000'
+      - '0.061574'
+      - '0.047370'
+      - '0.037500'
+      - '0.027741'
+      - '0.013648'
+      - '0.005000'
+      - '0.001056'
+      - '-0.002778'
+      - '-0.002500'
+      - '0.014407'
+      - '0.042759'
+      - '0.060000'
+    stored_mesh_x:
+    - 0
+    - 25
+    - 50
+    - 75
+    - 100
+    - 125
+    - 150
+    - 175
+    - 200
+    - 225
+    - 250
+    - 275
+    - 300
+    stored_mesh_y:
+    - 0
+    - 25
+    - 50
+    - 75
+    - 100
+    - 125
+    - 150
+    - 175
+    - 200
+    - 225
+    - 250
+    - 275
+    - 300
+    stored_mesh_z_height: 300
+  cura:
+    cura_engine: /usr/local/bin/cura_engine
+  discovery:
+    publicPort: 80
+    upnpUuid: 21fb83fb-aec4-45ff-9576-24a695b70887
+  enclosure:
+    _config_version: 6
+  errortracking:
+    unique_id: ee7d0279-faf2-4212-a27d-5f1bdf6592e0
+  excluderegion:
+    _config_version: 1
+  klipper:
+    _config_version: 2
+    macros:
+    - macro: M112
+      name: E-Stop
+      sidebar: true
+      tab: true
+    - macro: G32
+      name: Tram Gantry
+      sidebar: true
+      tab: true
+    - macro: BABY_UP
+      name: Babystep Up
+      sidebar: true
+      tab: true
+    - macro: BABY_DOWN
+      name: Babystep Down
+      sidebar: true
+      tab: true
+    - macro: G0 X150 Y30 Z150 F3000
+      name: Maintence
+      sidebar: true
+      tab: true
+  mqtt:
+    broker:
+      password: kBqF5JSomsqB
+      port: '1883'
+      protocol: MQTTv311
+      url: 192.168.2.5
+      username: VoronOctopi
+  softwareupdate:
+    _config_version: 6
+    check_providers:
+      DryRun: DryRun
+      OctoAutoremote: OctoAutoremote
+      TerminalCommands: TerminalCommands
+      active_filters_extended: active_filters_extended
+      bedlevelvisualizer: bedlevelvisualizer
+      dragon_order: dragon_order
+      enclosure: enclosure
+      excluderegion: excluderegion
+      fanspeedslider: fanspeedslider
+      klipper: klipper
+      ledstripcontrol: LEDStripControl
+      mqtt: mqtt
+      navbartemp: navbartemp
+      printhistory: printhistory
+      rgb_status: rgb_status
+      stats: stats
+      tempsgraph: tempsgraph
+      themeify: themeify
+  stats:
+    hotend: '40'
+  themeify:
+    customRules:
+    - enabled: false
+      rule: background-color
+      selector: .navbar-inner
+      value: '#2f3136'
+    - enabled: false
+      rule: background-color
+      selector: .accordion
+      value: '#2f3136'
+    - enabled: true
+      rule: width
+      selector: .span8
+      value: 70%
+    - enabled: true
+      rule: width
+      selector: .container
+      value: 100%
+    - enabled: true
+      rule: width
+      selector: .span4
+      value: 25%
+    - enabled: true
+      rule: margin-left
+      selector: .row
+      value: '0'
+    - enabled: true
+      rule: color
+      selector: .navbar-text
+      value: rgb(218, 218, 220)
+    - enabled: true
+      rule: color
+      selector: .plugin-klipper-log .log-item .msg
+      value: '#000'
+    - enabled: true
+      rule: color
+      selector: .plugin-klipper-log .log-item .ts
+      value: '#000'
+    enableCustomization: true
+  tracking:
+    enabled: true
+    unique_id: 784030e8-d88c-44f0-97b7-6eadb3a0c021
+printerProfiles: {}
+serial:
+  abortHeatupOnCancel: false
+  additionalPorts:
+  - /tmp/printer
+  autoconnect: true
+  disconnectOnErrors: false
+  port: /tmp/printer
+server:
+  commands:
+    serverRestartCommand: sudo service octoprint restart
+    systemRestartCommand: sudo shutdown -r now
+    systemShutdownCommand: sudo shutdown -h now
+  firstRun: false
+  onlineCheck:
+    enabled: true
+  pluginBlacklist:
+    enabled: true
+  secretKey: CCl2Y2ltYYrEWkc6Yg6Ysi98f266xuHl
+  seenWizards:
+    bedlevelvisualizer: null
+    corewizard: 3
+    cura: null
+    rgb_status: 3
+    tracking: null
+temperature:
+  profiles:
+  - bed: 100
+    chamber: null
+    extruder: 230
+    name: ABS
+  - bed: 60
+    chamber: null
+    extruder: 198
+    name: PLA
+webcam:
+  ffmpeg: /usr/bin/avconv
+  snapshot: http://127.0.0.1:8080/?action=snapshot
+  stream: /webcam/?action=stream
