@@ -49,15 +49,15 @@ plugins:
     _config_version: 1
     channels:
       _blog:
-        read_until: 1563963300
+        read_until: 1576506900
       _important:
         read_until: 1521111600
       _octopi:
         read_until: 1573722900
       _plugins:
-        read_until: 1573862400
+        read_until: 1576627200
       _releases:
-        read_until: 1571738400
+        read_until: 1576158300
   bedlevelvisualizer:
     command: BED_MESH_OUTPUT
     mesh_timestamp: 2019-11-19, 11:43:25 p.m.
@@ -271,6 +271,10 @@ plugins:
     unique_id: ee7d0279-faf2-4212-a27d-5f1bdf6592e0
   excluderegion:
     _config_version: 1
+  influxdb:
+    _config_version: 0
+    host: 192.168.2.5
+    prefix: voron_
   klipper:
     _config_version: 2
     macros:
@@ -313,6 +317,7 @@ plugins:
       enclosure: enclosure
       excluderegion: excluderegion
       fanspeedslider: fanspeedslider
+      influxdb: influxdb
       klipper: klipper
       ledstripcontrol: LEDStripControl
       mqtt: mqtt
